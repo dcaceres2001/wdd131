@@ -1,0 +1,142 @@
+/* General Configuration */
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+ 
+.course-title {
+    display: block
+    margin: 10px 0;
+
+}
+
+header {
+    background-color: #2e5d82;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navigation {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.navigation:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+
+.navigation li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 40px 0;
+    font-size: 2.5rem;
+}
+
+
+.main-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #2e5d82;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+.about-content {
+    display: block;
+    padding: 20px;
+    gap: 20px;
+}
+
+.about-content img {
+    float:right;
+    margin-left: 20px;}
+.about-content h2 {
+    
+    background-color: #2e5d82;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.profile-img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    
+}
+
+
+.country-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.flag-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.flag-img {
+    width: 120px;
+    border: 1px solid #eee;
+}
+
+h2 { 
+    background-color: #2e5d82;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+        margin: 0;
+
+}
+
+footer {
+    background-color: #2e5d82;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.last-modified {
+    color: #d4e157;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

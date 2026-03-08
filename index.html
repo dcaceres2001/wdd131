@@ -4,12 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Douglas Caceres</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals- Douglas Caceres-This is my website, designed to test my new skills">
+    <meta name="author" content="Douglas Caceres">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
-
 <body>
-    <h1> WDD 131 - Web Development Fundamentals</h1>
+    <header>
+        <span class="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.linkedin.com/in/douglas-c%C3%A1ceres-73904b134/" target="_blank">LinkedIn</a>
+                </li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">I-learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p3#p3"
+                        target="_blank">Scripture</a></li>
+                <li><a href="#" target="_blank">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Douglas Caceres</h1>
+        <div class="main-container">
+            <section class="card">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <img src="images/profile-douglas.jpg" alt="Douglas Caceres" class="profile-image" width="300">
+                    <p>My name is Douglas Caceres, and I am a student at BYU-Idaho. I am currently pursuing a degree in
+                        Web Design and Development. I have always been interested in technology and design, and I am
+                        excited to learn more about web development through this course. I live in Guatemala and work
+                        for US based company called ION Solar</p>
+                </div>
+                <div class="country-section">
+                    <h3>Villanueva, Guatemala</h3>
+                    <p>Villanueva is a city located in the department of Guatemala, Guatemala. It is known for its
+                        beautiful landscapes, rich culture, and warm climate. The city is surrounded by mountains and
+                        has a vibrant community that celebrates traditional festivals and events throughout the year.
+                        Villanueva offers a mix of modern amenities and traditional charm, making it a unique place to
+                        live and visit.</p>
+                </div>
+                <div class="flag-container">
+                    <img src="images/flag-of-guatemala.png" alt="Bandera de Guatemala" class="flag-image" width="200">
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs -
+                            JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs -
+                            HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs -
+                            CSS</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="last-modified">
+        <p>&copy; <span id="currentyear"></span> Douglas Caceres. Guatemala. </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
 </body>
+
 </html>
-    
