@@ -4,11 +4,16 @@ body {
     margin: 0;
     background-color: #f4f4f4;
 }
- 
-.course-title {
-    display: block
-    margin: 10px 0;
 
+.course-title {
+    display: block;
+}
+
+#course-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e6e9ec;
+    margin-bottom: 10px;
 }
 
 header {
@@ -23,6 +28,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .navigation {
     background-color: #333;
     display: flex;
@@ -87,10 +93,12 @@ h1 {
 }
 
 .about-content img {
-    float:right;
-    margin-left: 20px;}
+    float: right;
+    margin-left: 20px;
+}
+
 .about-content h2 {
-    
+
     background-color: #2e5d82;
     color: white;
     padding: 10px;
@@ -102,7 +110,7 @@ h1 {
     width: 150px;
     height: auto;
     border: 1px solid #ddd;
-    
+
 }
 
 
@@ -123,12 +131,12 @@ h1 {
     border: 1px solid #eee;
 }
 
-h2 { 
+h2 {
     background-color: #2e5d82;
     color: white;
     padding: 10px;
     border-radius: 4px;
-        margin: 0;
+    margin: 0;
 
 }
 
