@@ -12,19 +12,3 @@ footer {
     padding: 5px;
     font-weight: 200;
 }
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-
-}
-
-.temple-figure img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: black;
-}
