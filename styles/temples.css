@@ -22,6 +22,12 @@ h1 {
     justify-content: center;
 }
 
+.site-title {
+
+    font-size: 2rem;
+    justify-content: center;
+}
+
 .temple-figure {
     display: flex;
     flex-direction: column;
@@ -135,6 +141,13 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .site-title {
+
+        font-size: 2rem;
+        justify-content: center;
+
     }
 
     h1 {
