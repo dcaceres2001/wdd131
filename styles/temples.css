@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.temple-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: fit-content;
+    padding: 1rem;
+    color: black;
+}
+
+header {
+    background-color: rgb(64, 64, 187);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+#menu:hover {
+    opacity: 0.8;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+nav {
+    background-color: rgb(64, 64, 187);
+    margin: 0 auto;
+    max-width: 200px;
+
+}
+
+.navigation {
+    display: none;
+    margin: 0 auto;
+    max-width: 750px;
+
+}
+
+
+.navigation li {
+    display: block;
+
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+
+}
+
+.navigation a:hover,
+navigation a:active {
+    color: white;
+    background-color: black;
+}
+
+.navigation.show {
+    display: block;
+}
+
+#menu.show::before {
+    content: "✖";
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.temple-figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgb(64, 64, 187);
+    display: grid;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: center;
+
+    }
+
+    .temple-figure img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+}
