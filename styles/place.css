@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FDFD96;
+    --background-color: #4997D0;
+    --text-color: #000000;
+    --font-family: 'Roboto', sans-serif;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--primary-color);
+}
+
+.main-header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+.card-header {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+}
+
+.floating-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+li {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+strong {
+    width: 120px;
+    text-align: right;
+    padding-right: 15px;
+    display: inline-block;
+    }
+
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.last-modified {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+
+
+
+    .hero-container {
+        position: relative;
+    }
+
+
+    .floating-card {
+        display: block;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.9);
+        width: 240px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    .card-header {
+        background: var(--background-color);
+        color: white;
+        padding: 8px 12px;
+        font-weight: bold;
+    }
+
+    .card-content {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+
+    .data-card {
+        top: 30px;
+        left: 30px;
+    }
+
+    .weather-card {
+        bottom: 30px;
+        right: 30px;
+    }
+}

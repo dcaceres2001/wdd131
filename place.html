@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atitlan Lake - Guatemala</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals- Douglas Caceres-This website is designed to test my new skills">
+    <meta name="author" content="Douglas Caceres">
+   <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<div class="main-container">
+    <header class="main-header">
+        <h1>Solola</h1>
+    </header>
+
+
+    <main class="content-area">
+        <div class="hero-container">
+            <picture>
+                
+                <source media="(min-width: 768px)" srcset="images/lago-atitlan.jpg">
+                
+                <img src="images/lago-atitlan-small.jpg" alt="Lake Atitlan - Guatemala" class="hero-image">
+            </picture>
+        </div>
+
+        <!-- left Data Card -->
+        <section class="floating-card data-card">
+            <div class="card-header">Data</div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Area:</strong> 94 sq km</li>
+                    <li><strong>Population:</strong> 99,934</li>
+                    <li><strong>Capital:</strong> Solola</li>
+                    <li><strong>Languages:</strong> Spanish, Kakchiquel</li>
+                    <li><strong>Currency:</strong> Quetzal</li>
+                    <li><strong>Time Zone:</strong> UTC-6</li>
+                    <li><strong>Calling Code:</strong> +502</li>
+                    <li><strong>Internet TLD:</strong> .gt</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Right data card-->
+        <section class="floating-card weather-card">
+            <div class="card-header"> Weather </div>
+            <img src="images/sunny-weather.svg" alt="Sunny Weather Icon" width="50" height="50" class="weather-icon">
+            <div class="card-body">
+                <ul>
+                    <li><strong>Temperature:</strong> 17 °C</li>
+                    <li><strong>Conditions:</strong> Sunny</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+<footer class="last-modified">
+    <p>&copy; <span id="currentyear"></span> Douglas Caceres. Guatemala. </p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
