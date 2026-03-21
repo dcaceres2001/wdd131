@@ -10,7 +10,7 @@ const temp = 17;
 const windspeed = 5;
 
 const calculateWindChill = (temp, windspeed) => {
-    if (temp <= 50 && windspeed > 3) {
+    if (temp <= 10 && windspeed > 4.8) {
         const chill = 35.74 + (0.6215 * temp) - (35.75 * Math.pow(windspeed, 0.16)) + (0.4275 * temp * Math.pow(windspeed, 0.16));
         return chill;
     }
