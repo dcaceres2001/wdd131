@@ -85,12 +85,12 @@ strong {
     font-size: 1.5rem;
 }
 
-.weather-card .card-header::before {
+.weather-card .card-header::after {
     content: "";
     width: 30px;
     height: 30px;
     display: inline-block;
-    background-color: white;
+    background-color: currentColor;
     -webkit-mask-image: url("images/sun-weather-icon.svg");
     mask-image: url("images/sun-weather-icon.svg");
     -webkit-mask-repeat: no-repeat;
@@ -121,7 +121,8 @@ strong {
 
     .weather-card .card-header {
         background: var(--background-color);
-        color: white;
+        color: var(--primary-color);
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -133,7 +134,7 @@ strong {
     .card-header {
 
         background: var(--background-color);
-        color: white;
+        color: var(--primary-color);
         padding: 8px 12px;
         font-weight: bold;
 
