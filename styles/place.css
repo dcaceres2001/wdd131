@@ -30,7 +30,7 @@ body {
     font-size: 2rem;
 }
 
-.card-header {
+.card-header h2 {
     display: inline-flex;
     align-items: center;
     gap: 15px;
