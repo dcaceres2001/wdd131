@@ -49,7 +49,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    
+
 }
 
 ul {
@@ -70,7 +70,7 @@ strong {
     text-align: right;
     padding-right: 15px;
     display: inline-block;
-    }
+}
 
 .weather-icon {
     font-size: 3rem;
@@ -83,6 +83,22 @@ strong {
     text-align: center;
     padding: 20px;
     font-size: 1.5rem;
+}
+
+.weather-card .card-header::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: white;
+    -webkit-mask-image: url("images/sun-weather-icon.svg");
+    mask-image: url("images/sun-weather-icon.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+
 }
 
 @media (min-width: 768px) {
@@ -100,15 +116,27 @@ strong {
         background: rgba(255, 255, 255, 0.9);
         width: 240px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        
+
     }
 
-    .card-header  {
-        
+    .weather-card .card-header {
+        background: var(--background-color);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+
+    .card-header {
+
         background: var(--background-color);
         color: white;
         padding: 8px 12px;
         font-weight: bold;
+
     }
 
     .card-content {
