@@ -2,6 +2,7 @@
     --primary-color: #FFFFFF;
     --secondary-color: #FDFD96;
     --background-color: #4997D0;
+    --shadow-color: rgba(0, 0, 0, 0.2);
     --text-color: #000000;
     --font-family: 'Roboto', sans-serif;
 }
@@ -113,9 +114,9 @@ strong {
     .floating-card {
         display: block;
         position: absolute;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--primary-color, 0.9);
         width: 240px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 10px var(--shadow-color,0.2);
 
     }
 
