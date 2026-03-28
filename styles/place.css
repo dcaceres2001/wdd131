@@ -102,9 +102,19 @@ strong {
 
 }
 
+.weather-emoji {
+    display: none;
+    font-size: 1.4rem;
+    margin-right: 6px;
+}
+
+.weather-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 @media (min-width: 768px) {
-
-
 
     .hero-container {
         position: relative;
@@ -116,7 +126,7 @@ strong {
         position: absolute;
         background: var(--primary-color, 0.9);
         width: 240px;
-        box-shadow: 0 4px 10px var(--shadow-color,0.2);
+        box-shadow: 0 4px 10px var(--shadow-color, 0.2);
 
     }
 
@@ -155,5 +165,13 @@ strong {
     .weather-card {
         bottom: 30px;
         right: 30px;
+    }
+
+    .weather-emoji {
+        display: inline-block;
+    }
+
+    .weather-icon {
+        display: none;
     }
 }

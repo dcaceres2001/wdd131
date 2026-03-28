@@ -5,8 +5,6 @@
     --text-color: #f4f4f4;
 }
 
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -99,7 +97,7 @@ nav {
     text-decoration: none;
     color: var(--text-color);
     transition: 0.5s;
-
+    cursor: pointer;
 }
 
 .navigation a:hover,
