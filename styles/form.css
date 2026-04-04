@@ -1,5 +1,6 @@
 :root {
     --primary-color: #4b0082;
+    --secondary-color: #f39c12;
     --bg-color: #f4f4f9;
     --text-color: #333;
 }
@@ -7,29 +8,34 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
 
 form {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
     width: 100%;
-    margin: 2rem 0;
-}
-
-h1 {
-    background: var(--primary-color);
-    color: white;
-    margin: -2rem -2rem 1.5rem -2rem;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
+    max-width: 500px;
 }
 
 label,
@@ -40,9 +46,17 @@ legend {
     color: var(--primary-color);
 }
 
+
+.check-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
 select,
-input,
-input[type="date"],
+input:not([type="checkbox"]),
 textarea {
     width: 100%;
     padding: 0.8rem;
@@ -59,6 +73,7 @@ fieldset {
     padding: 1rem;
 }
 
+
 .stars {
     display: flex;
     flex-direction: row-reverse;
@@ -70,7 +85,7 @@ fieldset {
 }
 
 .stars label {
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
     color: #ccc;
     margin: 0;
@@ -79,7 +94,7 @@ fieldset {
 .stars input:checked~label,
 .stars label:hover,
 .stars label:hover~label {
-    color: #f39c12;
+    color: var(--secondary-color);
 }
 
 input[type="submit"] {
@@ -91,17 +106,28 @@ input[type="submit"] {
     margin-top: 2rem;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: opacity 0.3s;
+    border-radius: 4px;
 }
 
 input[type="submit"]:hover {
-    opacity: 0.9;
+    filter: brightness(1.2);
 }
 
 footer {
     text-align: center;
     background: var(--primary-color);
     color: white;
-    width: 100%;
     padding: 1rem 0;
+}
+
+
+@media (min-width: 600px) {
+    form {
+        padding: 2.5rem;
+        margin: 2rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
 }
