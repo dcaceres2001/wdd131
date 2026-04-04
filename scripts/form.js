@@ -43,15 +43,29 @@ const productSelect = document.getElementById("productName");
 
 products.forEach(product => {
     let option = document.createElement("option");
-    option.value = product.id;  
-    option.textContent = product.name; 
+    option.value = product.id;
+    option.textContent = product.name;
     productSelect.appendChild(option);
 });
 
 
-document.getElementById("lastMod").textContent = document.lastModified;
 
-let count = localStorage.getItem("reviewCounter") || 0;
-count++;
-localStorage.setItem("reviewCounter", count);
-document.getElementById("reviewCount").textContent = count;
+const form = document.getElementById("reviewForm");
+if (form) {
+    form.addEventListener("submit", () => {
+        let count = parseInt(localStorage.getItem("reviewCounter"), 10) || 0;
+        count++;
+        localStorage.setItem("reviewCounter", count);
+        
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const reviewCountEl = document.getElementById("reviewCount");
+    if (reviewCountEl) {
+        const count = parseInt(localStorage.getItem("reviewCounter"), 10) || 0;
+        reviewCountEl.textContent = count;
+    }
+});
+
