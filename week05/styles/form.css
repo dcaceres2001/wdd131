@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #4b0082;
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+h1 {
+    background: var(--primary-color);
+    color: white;
+    margin: -2rem -2rem 1.5rem -2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+label,
+legend {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+select,
+input,
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+    margin: 0;
+}
+
+.stars input:checked~label,
+.stars label:hover,
+.stars label:hover~label {
+    color: #f39c12;
+}
+
+input[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+}
