@@ -1,33 +1,406 @@
 :root {
+    /* Brand Colors */
     --primary-color: #FA7445;
     --secondary-color: #292929;
     --accent-color: #D82909;
+   
+
+    /* Text Colors */
     --font-color: #F2F2F2;
     --font-color2: #000000;
+    --text-light: #333333;
+    --text-muted: #555555;
+    
 
+    /* Backgrounds & Cards */
+    --card-bg: #FFFFFF;
+    --light-bg: #F8F8F8;
+    --section-bg: #F9F9F9;
+    
+
+    /* Borders & Shadows */
+    --border-color: #CCCCCC;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
 }
 
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.montserrat-regular {
+body {
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    line-height: 1.6;
+    color: var(--font-color2);
 }
 
+header {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
 
-h1,
-h2,
-h3 {
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+}
+
+h1 {
     color: var(--font-color2);
     background-color: var(--primary-color);
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     margin: 0;
-    padding: 20px;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+}
 
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.nav-bar a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: all 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* Hamburger Menu */
+#menu {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu::after {
+    content: " ☰";
+}
+
+#menu.open::after {
+    content: " ✖";
+}
+
+/* Filters */
+.filters {
+    padding: 1rem;
+    background: var(--light-bg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    flex: 1 1 auto;
+    min-width: 140px;
+}
+
+.filter-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Tour Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.hike-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.hike-card:hover {
+    transform: scale(1.03);
+}
+
+.hike-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.hike-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    text-align: center;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/fuego-small.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Contact Page Styles */
+.contact-main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.contact,
+.location {
+    background: var(--section-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.contact h2,
+.location h2 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    background: none;
+    padding: 0;
+}
+
+.contact p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+form div {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-light);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Location iframe */
+.location iframe {
+    width: 100%;
+    height: 380px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Filter toggle button (mobile) */
+#filter-menu-btn {
+    display: none;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-bar ul.show {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #filter-container {
+        display: none;
+        flex-direction: column;
+    }
+
+    #filter-container.show {
+        display: flex;
+    }
+
+    .filter-btn {
+        min-width: 100%;
+    }
+
+    #filter-menu-btn {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('../images/fuego-volcan.jpg');
+    }
+
+    .hero h2 {
+        font-size: 3.5rem;
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .location iframe {
+        height: 420px;
+    }
+
+    #filter-container {
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        justify-content: center;
+    }
 }

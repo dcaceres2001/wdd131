@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayan Summit - Home</title>
-    <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals - Douglas Caceres - Experience thrilling volcano hikes in Guatemala with Mayan Summit Tours.">
+    <title>Mayan Summit - Tours</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Douglas Caceres">
     <meta name="author" content="Douglas Caceres">
 
     <link rel="stylesheet" href="styles/mayansummit.css">
@@ -37,14 +36,19 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Thrill visiting Guatemalan Volcanoes and its amazing landscapes</h2>
-                <p>Join us on an unforgettable journey through the heart of the Mayan civilization. Experience
-                    breathtaking volcano hikes, rich culture, and stunning natural beauty in Guatemala.</p>
-                <a href="tours.html" class="cta-button">Explore Our Tours</a>
-            </div>
-        </section>
+        <h2 id="page-title">Explore Our Tours</h2>
+
+    <div class="filters">
+        <button id="filter-menu-btn" aria-label="Toggle filters">Filters ☰</button>
+        <div id="filter-container">
+            <button class="filter-btn" data-difficulty="All">All Tours</button>
+            <button class="filter-btn" data-difficulty="High">High Difficulty</button>
+            <button class="filter-btn" data-difficulty="Medium">Medium Difficulty</button>
+            <button class="filter-btn" data-difficulty="Low">Low Difficulty</button>
+        </div>
+    </div>
+
+        <div id="tour-cards-container" class="grid-container"></div>
     </main>
 
     <footer>
